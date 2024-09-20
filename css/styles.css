@@ -1,0 +1,72 @@
+/* Variáveis de Cores */
+
+:root {
+    --primary-custom-color: #061440;
+    --secondary-custom-color: #038C3E;
+    --tertiary-custom-color: #F2AE30;
+    --background-custom-color: #B0B4BF;
+    --text-primary-custom-color: #0D0D0D;
+}
+
+/* Fontes personalizadas */
+
+@font-face {
+    font-family: 'Octin College';
+    src: url('../fonts/OctinCollegeRegular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Octin College';
+    src: url('../fonts/OctinCollegeBold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Octin College';
+    src: url('../fonts/OctinCollegeSemiBold.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Octin College';
+    src: url('../fonts/OctinCollegeLight.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Estilos das páginas */
+
+html,
+body {
+    background: var(--background-custom-color);
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    background-color: var(--primary-custom-color);
+    color: var(--background-custom-color);
+}
+
+footer {
+    background-color: var(--primary-custom-color);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: var(--background-custom-color);
+}
