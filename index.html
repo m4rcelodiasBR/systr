@@ -27,8 +27,8 @@
 </header>
 
 <main class="container">
-    <!-- Botões para alternar entre os formulários -->
-    <ul class="nav nav-pills justify-content-center mt-3 mb-5" id="formTabs" role="tablist">
+    <!-- Botões para alternar entre os Termos/Formulários -->
+    <ul class="nav nav-pills justify-content-center my-3" id="formTabs" role="tablist">
         <li class="nav-item" role="presentation">
             <button aria-controls="tre-texto" aria-selected="true" class="nav-link active" data-bs-target="#tre-texto"
                     data-bs-toggle="pill" id="tabTextoTRE"
@@ -54,14 +54,15 @@
             </button>
         </li>
     </ul>
+    <hr>
     <div class="tab-content">
         <!-- TRE -->
         <div aria-labelledby="tabTermoTRE" class="termo tab-pane fade show active" id="tre-texto" role="tabpanel">
             <div class="row gx-5 justify-content-center">
                 <!-- Texto Termo -->
                 <div class="col">
-                    <div class="text-center">
-                        <h5 class="mb-3">Termo de Responsabilidade de Estação de Trabalho</h5>
+                    <div>
+                        <h5 class="mb-3 text-center">Termo de Responsabilidade de Estação de Trabalho</h5>
                         <p>
                             Eu, <strong>[NOME COMPLETO]</strong>, declaro que recebi e estou ciente das minhas
                             responsabilidades com
@@ -167,180 +168,244 @@
                         </form>
                     </div>
                 </div>
+                <hr>
                 <div class="mt-3 text-center btn-open-form">
                     <button class="btn btn-success w-25 mb-3 fw-bold" id="preencherFormTRE" type="button">
-                        GERAR TRE
-                        <span class="bi bi-pencil-square"</span>
+                        BAIXAR TRE
+                        <span class="bi bi-file-earmark-check-fill"></span>
                     </button>
                 </div>
             </div>
         </div>
-
+        <!-- TRI -->
         <div aria-labelledby="tabTermoTRI" class="termo tab-pane fade" id="tri-texto" role="tabpanel">
-            <div>
-                <h5 class="my-3 text-center">Termo de Responsabilidade Individual</h5>
-                <p>
-                    Eu, <strong>[NOME COMPLETO]</strong>, declaro que compreendo e aceito todas as responsabilidades
-                    associadas ao uso dos recursos tecnológicos que me foram concedidos individualmente. O acesso aos
-                    sistemas e à infraestrutura da organização será feito de maneira consciente e em conformidade com as
-                    políticas estabelecidas.
-                </p>
-                <p>
-                    Assumo o compromisso de proteger as credenciais de acesso que me foram fornecidas, utilizando-as
-                    exclusivamente para as atividades profissionais que me competem. Não irei compartilhar meu acesso
-                    com
-                    terceiros, e tomarei as devidas precauções para evitar qualquer tipo de uso indevido.
-                </p>
-                <p>
-                    Em caso de violação das políticas de segurança da organização, compreendo que poderei ser
-                    responsabilizado(a) por qualquer dano ou prejuízo causado, incluindo a possibilidade de sanções
-                    disciplinares, conforme estabelecido no regulamento interno.
-                </p>
-            </div>
-            <hr>
-            <div class="mt-3 text-center btn-open-form">
-                <button class="btn btn-success w-50" id="preencherFormTRI" type="button">
-                    Preencher TRI
-                    <span class="bi bi-pencil-square"</span>
-                </button>
+            <div class="row gx-5 justify-content-center">
+                <!-- Texto Termo -->
+                <div class="col">
+                    <h5 class="mb-3 text-center">Termo de Responsabilidade Individual</h5>
+                    <p>
+                        Eu, <strong>[NOME COMPLETO]</strong>, declaro que compreendo e aceito todas as responsabilidades
+                        associadas ao uso dos recursos tecnológicos que me foram concedidos individualmente. O acesso aos
+                        sistemas e à infraestrutura da organização será feito de maneira consciente e em conformidade com as
+                        políticas estabelecidas.
+                    </p>
+                    <p>
+                        Assumo o compromisso de proteger as credenciais de acesso que me foram fornecidas, utilizando-as
+                        exclusivamente para as atividades profissionais que me competem. Não irei compartilhar meu acesso
+                        com
+                        terceiros, e tomarei as devidas precauções para evitar qualquer tipo de uso indevido.
+                    </p>
+                    <p>
+                        Em caso de violação das políticas de segurança da organização, compreendo que poderei ser
+                        responsabilizado(a) por qualquer dano ou prejuízo causado, incluindo a possibilidade de sanções
+                        disciplinares, conforme estabelecido no regulamento interno.
+                    </p>
+                </div>
+                <!-- Formulário -->
+                <div class="col">
+                    <div>
+                        <h5 class="text-center mb-3">Preencha os dados</h5>
+                        <form>
+                            <!-- Radio + Select -->
+                            <div class="row mx-5 mb-3 align-items-center justify-content-center">
+                                <div class="col text-center">
+                                    <div class="form-check">
+                                        <input checked class="form-check-input" id="oficialRadio" name="tipoUsuario"
+                                               type="radio" value="Oficial">
+                                        <label class="form-check-label" for="oficialRadio">Oficial</label>
+                                    </div>
+                                </div>
+                                <div class="col text-center">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="pracaRadio" name="tipoUsuario" type="radio"
+                                               value="Praca">
+                                        <label class="form-check-label" for="pracaRadio">Praça</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="postoGrad">
+                                            <option value="1">Opção 1</option>
+                                            <option value="2">Opção 2</option>
+                                            <option value="3">Opção 3</option>
+                                        </select>
+                                        <label class="form-label" for="postoGrad">Posto/Graduação</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Nome Completo + IP -->
+                            <div class="row mb-3">
+                                <div class="col-md-8">
+                                    <div class="form-floating">
+                                        <input class="form-control" id="nomeCompleto" placeholder="Digite seu nome" type="text">
+                                        <label class="form-label" for="nomeCompleto">Nome Completo</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input class="form-control" id="ipUsuario" type="text" value="192.168.1.0" disabled>
+                                        <label class="form-label" for="ipUsuario">IP da Máquina</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Setor + Divisão + Tipo de Usuário -->
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input class="form-control" id="mac" value="B3:4E:34:6B:2C:1A" type="text" disabled>
+                                        <label class="form-label" for="mac">Endereço Físico</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input class="form-control" id="setor" placeholder="Digite o setor" type="text">
+                                        <label class="form-label" for="setor">Setor</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input class="form-control" id="divisao" placeholder="Digite a divisão" type="text">
+                                        <label class="form-label" for="divisao">Divisão</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="tipoUsuario">
+                                            <option value="Administrador">Administrador</option>
+                                            <option value="Padrao">Padrão</option>
+                                        </select>
+                                        <label class="form-label" for="tipoUsuario">Tipo de Usuário</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <hr>
+                <div class="mt-3 text-center btn-open-form">
+                    <button class="btn btn-success w-25 mb-3 fw-bold" id="preencherFormTRI" type="button">
+                        BAIXAR TRI
+                        <span class="bi bi-file-earmark-check-fill"></span>
+                    </button>
+                </div>
             </div>
         </div>
-
+        <!-- TRPS -->
         <div aria-labelledby="tabTermoTRPS" class="termo tab-pane fade" id="trps-texto" role="tabpanel">
-            <div>
-                <h5 class="my-3 text-center">Termo de Responsabilidade Portal de Serviços</h5>
-                <p>
-                    Eu, <strong>[NOME COMPLETO]</strong>, declaro que fui informado(a) sobre as diretrizes de uso do
-                    Portal
-                    de Serviços da organização. Comprometo-me a acessar e utilizar os serviços disponíveis de maneira
-                    segura, seguindo todas as orientações e políticas de privacidade definidas.
-                </p>
-                <p>
-                    Concordo em utilizar o Portal de Serviços exclusivamente para os fins estabelecidos pela
-                    organização,
-                    sendo responsável pelo sigilo das informações acessadas e pelo uso adequado das funcionalidades
-                    disponibilizadas. Estou ciente de que qualquer mau uso pode resultar em consequências legais ou
-                    disciplinares.
-                </p>
-                <p>
-                    Assumo o compromisso de manter atualizadas todas as informações pessoais e profissionais registradas
-                    no
-                    Portal de Serviços, bem como de notificar imediatamente qualquer irregularidade ou problema técnico
-                    identificado durante o uso do sistema.
-                </p>
+            <div class="row gx-5 justify-content-center">
+                <!-- Texto Termo -->
+                <div class="col">
+                    <h5 class="mb-3 text-center">Termo de Responsabilidade Portal de Serviços</h5>
+                    <p>
+                        Eu, <strong>[NOME COMPLETO]</strong>, declaro que compreendo e aceito todas as responsabilidades
+                        associadas ao uso dos recursos tecnológicos que me foram concedidos individualmente. O acesso aos
+                        sistemas e à infraestrutura da organização será feito de maneira consciente e em conformidade com as
+                        políticas estabelecidas.
+                    </p>
+                    <p>
+                        Assumo o compromisso de proteger as credenciais de acesso que me foram fornecidas, utilizando-as
+                        exclusivamente para as atividades profissionais que me competem. Não irei compartilhar meu acesso
+                        com
+                        terceiros, e tomarei as devidas precauções para evitar qualquer tipo de uso indevido.
+                    </p>
+                    <p>
+                        Em caso de violação das políticas de segurança da organização, compreendo que poderei ser
+                        responsabilizado(a) por qualquer dano ou prejuízo causado, incluindo a possibilidade de sanções
+                        disciplinares, conforme estabelecido no regulamento interno.
+                    </p>
+                </div>
+                <!-- Formulário -->
+                <div class="col">
+                    <div>
+                        <h5 class="text-center mb-3">Preencha os dados</h5>
+                        <form>
+                            <!-- Radio + Select -->
+                            <div class="row mx-5 mb-3 align-items-center justify-content-center">
+                                <div class="col text-center">
+                                    <div class="form-check">
+                                        <input checked class="form-check-input" id="oficialRadio" name="tipoUsuario"
+                                               type="radio" value="Oficial">
+                                        <label class="form-check-label" for="oficialRadio">Oficial</label>
+                                    </div>
+                                </div>
+                                <div class="col text-center">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="pracaRadio" name="tipoUsuario" type="radio"
+                                               value="Praca">
+                                        <label class="form-check-label" for="pracaRadio">Praça</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="postoGrad">
+                                            <option value="1">Opção 1</option>
+                                            <option value="2">Opção 2</option>
+                                            <option value="3">Opção 3</option>
+                                        </select>
+                                        <label class="form-label" for="postoGrad">Posto/Graduação</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Nome Completo + IP -->
+                            <div class="row mb-3">
+                                <div class="col-md-8">
+                                    <div class="form-floating">
+                                        <input class="form-control" id="nomeCompleto" placeholder="Digite seu nome" type="text">
+                                        <label class="form-label" for="nomeCompleto">Nome Completo</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input class="form-control" id="ipUsuario" type="text" value="192.168.1.0" disabled>
+                                        <label class="form-label" for="ipUsuario">IP da Máquina</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Setor + Divisão + Tipo de Usuário -->
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input class="form-control" id="mac" value="B3:4E:34:6B:2C:1A" type="text" disabled>
+                                        <label class="form-label" for="mac">Endereço Físico</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input class="form-control" id="setor" placeholder="Digite o setor" type="text">
+                                        <label class="form-label" for="setor">Setor</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input class="form-control" id="divisao" placeholder="Digite a divisão" type="text">
+                                        <label class="form-label" for="divisao">Divisão</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="tipoUsuario">
+                                            <option value="Administrador">Administrador</option>
+                                            <option value="Padrao">Padrão</option>
+                                        </select>
+                                        <label class="form-label" for="tipoUsuario">Tipo de Usuário</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <hr>
+                <div class="mt-3 text-center btn-open-form">
+                    <button class="btn btn-success w-25 mb-3 fw-bold" id="preencherFormTRI" type="button">
+                        BAIXAR TRPS
+                        <span class="bi bi-file-earmark-check-fill"></span>
+                    </button>
+                </div>
             </div>
-            <hr>
-            <div class="mt-3 text-center btn-open-form">
-                <button class="btn btn-success w-50" id="preencherFormTRPS" type="button">
-                    Preencher TRPS
-                    <span class="bi bi-pencil-square"</span>
-                </button>
-            </div>
-        </div>
-    </div>
-    </div>
-
-
-    <!-- Formulários -->
-    <div class="tab-content">
-        <!-- Formulário TRE -->
-
-
-        <!-- Formulário TRI -->
-        <div class="formulario d-none" id="tri-form">
-            <form>
-                <!-- Radio + Select -->
-                <div class="row mx-5 mb-3 align-items-center justify-content-center">
-                    <div class="col-md-1 text-center">
-                        <div class="form-check">
-                            <input checked class="form-check-input" id="oficialRadio" name="tipoUsuario"
-                                   type="radio" value="Oficial">
-                            <label class="form-check-label" for="oficialRadio">Oficial</label>
-                        </div>
-                    </div>
-                    <div class="col-md-1 text-center">
-                        <div class="form-check">
-                            <input class="form-check-input" id="pracaRadio" name="tipoUsuario" type="radio"
-                                   value="Praca">
-                            <label class="form-check-label" for="pracaRadio">Praça</label>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <select class="form-select">
-                            <option value="">Posto/Graduação</option>
-                            <option value="1">Opção 1</option>
-                            <option value="2">Opção 2</option>
-                            <option value="3">Opção 3</option>
-                        </select>
-                    </div>
-                </div>
-                <!-- Nome Completo + CredSeg-->
-                <div class="row mb-3">
-                    <div class="col-md-8">
-                        <label class="form-label" for="nomeCompleto">Nome Completo</label>
-                        <input class="form-control" id="nomeCompleto" placeholder="Digite seu nome" type="text">
-                    </div>
-                    <div class="col-md-4">
-                        <label class="form-label" for="credSeg">Credencial de Segurança</label>
-                        <input class="form-control" id="credSeg" placeholder="Nível" type="text">
-                    </div>
-                </div>
-                <!-- Setor + Divisão + Tipo de Usuário -->
-                <div class="row mb-3">
-                    <div class="col-md-4">
-                        <label class="form-label" for="setor">Setor</label>
-                        <input class="form-control" id="setor" placeholder="Digite o setor" type="text">
-                    </div>
-                    <div class="col-md-4">
-                        <label class="form-label" for="divisao">Divisão</label>
-                        <input class="form-control" id="divisao" placeholder="Digite a divisão" type="text">
-                    </div>
-                    <div class="col-md-4">
-                        <label class="form-label" for="tipoUsuario">Tipo de Usuário</label>
-                        <select class="form-select" id="tipoUsuario">
-                            <option value="Administrador">Administrador</option>
-                            <option value="Padrao">Padrão</option>
-                        </select>
-                    </div>
-                </div>
-                <!-- Botão de Próximo -->
-                <div class="row mb-3">
-                    <div class="col-md-12 text-center">
-                        <button class="btn btn-primary" type="button">Próximo</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <!-- Formulário TRPS (mesma estrutura do TRE) -->
-        <div class="formulario d-none" id="trps-form">
-            <form>
-                <!-- Radio + Select -->
-                <div class="row mx-5 mb-3 align-items-center justify-content-center">
-                    <div class="col-md-1 text-center">
-                        <div class="form-check">
-                            <input checked class="form-check-input" id="oficialRadio" name="tipoUsuario"
-                                   type="radio" value="Oficial">
-                            <label class="form-check-label" for="oficialRadio">Oficial</label>
-                        </div>
-                    </div>
-                    <div class="col-md-1 text-center">
-                        <div class="form-check">
-                            <input class="form-check-input" id="pracaRadio" name="tipoUsuario" type="radio"
-                                   value="Praca">
-                            <label class="form-check-label" for="pracaRadio">Praça</label>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <select class="form-select">
-                            <option value="">Posto/Graduação</option>
-                            <option value="1">Opção 1</option>
-                            <option value="2">Opção 2</option>
-                            <option value="3">Opção 3</option>
-                        </select>
-                    </div>
-                </div>
-            </form>
         </div>
     </div>
 </main>
