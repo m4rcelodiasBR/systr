@@ -40,6 +40,11 @@
 
 /* Estilos */
 
+.custom-tooltip {
+    --bs-tooltip-bg: var(--primary-custom-color);
+    --bs-tooltip-color: var(--tertiary-custom-color);
+}
+
 html,
 body {
     background: var(--background-custom-color);
@@ -67,10 +72,39 @@ footer {
     width: 100%;
 }
 
+small {
+    font-size: 0.75em;
+}
+
+.obs {
+    cursor: pointer;
+}
+
 footer p {
     color: var(--background-custom-color);
 }
 
 .titulo-sistema {
     background-color: var(--secondary-custom-color);
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.texto-termo {
+    height: 42vh;
+}
+
+.modal-content {
+    background-color: var(--primary-custom-color);
+}
+
+.modal-header {
+    color: var(--background-custom-color);
+    border: none;
+}
+
+.modal-footer {
+    border: none;
 }
