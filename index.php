@@ -220,20 +220,18 @@ $hostname = gethostbyaddr($ip);
                                     </button>
                                     <input type="hidden" id="programasSelecionados" name="programasSelecionados">
                                 </div>
-                                <div class="col-md-8">
-                                    <small>
-                                        <ul>
-                                            <li>
-                                                <span class="text-danger fw-bold">*</span> Campos obrigatórios
-                                            </li>
-                                            <li>
-                                                Se a <em>Identificação</em> não esteja de acordo com a etiqueta do
-                                                dispositivo.
-                                                Entre em contato com o <span class="obs text-decoration-underline"
-                                                                             title="Ramal: 3966"> Administrador de Rede da OM.</span>
-                                            </li>
-                                        </ul>
-                                    </small>
+                                <div class="col-md-8 fs-7">
+                                    <ul>
+                                        <li>
+                                            <span class="text-danger fw-bold">*</span> Campos obrigatórios
+                                        </li>
+                                        <li>
+                                            Se a <em>Identificação</em> não esteja de acordo com a etiqueta do
+                                            dispositivo.
+                                            Entre em contato com o <span class="obs text-decoration-underline"
+                                                                         title="Ramal: 3966"> Administrador de Rede da OM.</span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </form>
@@ -440,19 +438,17 @@ $hostname = gethostbyaddr($ip);
                                 </div>
                             </div>
                         </form>
-                        <div>
-                            <small>
-                                <ul>
-                                    <li>
-                                        <span class="text-danger fw-bold">*</span> Campos obrigatórios
-                                    </li>
-                                    <li>
-                                        Se a <em>Identificação</em> não esteja de acordo com a etiqueta do dispositivo.
-                                        Entre em contato com o <span class="obs text-decoration-underline"
-                                                                     title="Ramal: 3966"> Administrador de Rede da OM.</span>
-                                    </li>
-                                </ul>
-                            </small>
+                        <div class="fs-7">
+                            <ul>
+                                <li>
+                                    <span class="text-danger fw-bold">*</span> Campos obrigatórios
+                                </li>
+                                <li>
+                                    Se a <em>Identificação</em> não esteja de acordo com a etiqueta do dispositivo.
+                                    Entre em contato com o <span class="obs text-decoration-underline"
+                                                                 title="Ramal: 3966"> Administrador de Rede da OM.</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -548,19 +544,17 @@ $hostname = gethostbyaddr($ip);
                                 </div>
                             </div>
                         </form>
-                        <div>
-                            <small>
-                                <ul>
-                                    <li>
-                                        <span class="text-danger fw-bold">*</span> Campos obrigatórios
-                                    </li>
-                                    <li>
-                                        Se a <em>Identificação</em> não esteja de acordo com a etiqueta do dispositivo.
-                                        Entre em contato com o <span class="obs text-decoration-underline"
-                                                                     title="Ramal: 3966"> Administrador de Rede da OM.</span>
-                                    </li>
-                                </ul>
-                            </small>
+                        <div class="fs-7">
+                            <ul>
+                                <li>
+                                    <span class="text-danger fw-bold">*</span> Campos obrigatórios
+                                </li>
+                                <li>
+                                    Se a <em>Identificação</em> não esteja de acordo com a etiqueta do dispositivo.
+                                    Entre em contato com o <span class="obs text-decoration-underline"
+                                                                 title="Ramal: 3966"> Administrador de Rede da OM.</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
