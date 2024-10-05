@@ -70,7 +70,7 @@ $hostname = gethostbyaddr($ip);
                 <!-- Texto Termo -->
                 <div class="col bg-light">
                     <div>
-                        <h5 class="my-3 text-center">Termo de Responsabilidade de Estação de Trabalho</h5>
+                        <h5 class="my-3 text-center text-uppercase fw-bold">Termo de Responsabilidade de Estação de Trabalho</h5>
                     </div>
                     <div class="text-justify px-2 overflow-auto texto-termo">
                         <p>
@@ -89,9 +89,9 @@ $hostname = gethostbyaddr($ip);
                         </ul>
                         <p><strong>II – de instalação de programas:</strong></p>
                         <button type="button" class="p-0 btn mb-3" data-bs-toggle="tooltip" data-bs-placement="right"
-                                data-bs-title="Poderá ser visualizado após baixar o Termo"
+                                data-bs-title="Poderá ser visualizado após gerar o Termo"
                                 data-bs-custom-class="custom-tooltip">
-                            Conforme Anexo.
+                            Lista de programas.
                         </button>
                         <p><strong>III – de senha de acesso à máquina (“boot”):</strong></p>
                         <p>
@@ -130,7 +130,7 @@ $hostname = gethostbyaddr($ip);
                 <!-- Formulário -->
                 <div class="col">
                     <div>
-                        <h5 class="text-center my-3">Preencha os dados</h5>
+                        <h5 class="text-center my-3 text-uppercase fw-bold">Preencha os dados</h5>
                         <form class="formulario">
                             <!-- Oficial/Praça -->
                             <div class="row mb-3 align-items-center justify-content-center">
@@ -172,14 +172,14 @@ $hostname = gethostbyaddr($ip);
                                 <div class="col-md-9">
                                     <div class="form-floating">
                                         <input class="form-control text-uppercase" id="nomeCompleto" placeholder="Digite seu nome"
-                                               type="text" required>
+                                               type="text">
                                         <label class="form-label" for="nomeCompleto">Nome Completo <span class="text-danger">*</span></label>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-floating">
-                                        <input class="form-control" id="nip" placeholder="NIP"
-                                               type="text" required>
+                                        <input class="form-control nip" id="nip" placeholder="NIP"
+                                               type="text">
                                         <label class="form-label" for="nip">NIP <span class="text-danger">*</span></label>
                                     </div>
                                 </div>
@@ -188,27 +188,25 @@ $hostname = gethostbyaddr($ip);
                             <div class="row mb-3">
                                 <div class="col-md-4">
                                     <div class="form-floating">
-                                        <input class="form-control" id="enderecoIP" type="text"
-                                               value="<?php echo $ip; ?>" disabled>
+                                        <input class="form-control" id="enderecoIP" type="text" value="<?php echo $ip; ?>" disabled>
                                         <label class="form-label" for="enderecoIP">Endereço IP <span class="text-danger">*</span></label>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-floating">
-                                        <input class="form-control" id="macAddress" value="" type="text" required>
+                                        <input class="form-control" id="macAddress" type="text" placeholder="Endereço Físico">
                                         <label class="form-label" for="macAddress">Endereço Físico <span class="text-danger">*</span></label>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-floating align-items-center">
                                         <input class="form-control text-uppercase" id="nomeMaquina" type="text"
-                                               value="<?php echo $hostname; ?>"
+                                               placeholder="CPO-C-XX"
                                                data-bs-toggle="tooltip"
                                                data-bs-custom-class="custom-tooltip"
                                                data-bs-html="true"
                                                data-bs-placement="bottom"
-                                               data-bs-title="Verifique se a <strong>etiqueta</strong> do seu equipamento é igual a informação deste campo."
-                                               disabled>
+                                               data-bs-title="Verifique se a <strong>etiqueta</strong> do seu equipamento é igual a informação deste campo.">
                                         <label class="form-label" for="nomeMaquina">Identificação <span class="text-danger">*</span></label>
                                     </div>
                                 </div>
@@ -243,7 +241,7 @@ $hostname = gethostbyaddr($ip);
                 </div>
                 <!-- Botão Gerar TRE -->
                 <div class="mt-3 text-center">
-                    <button class="btn btn-success w-25 mb-3 fw-bold" id="gerarTRE" type="submits">
+                    <button class="btn btn-success w-25 mb-3 fw-bold" id="gerarTRE" type="submit">
                         GERAR TRE
                         <span class="bi bi-file-earmark-arrow-down-fill"></span>
                     </button>
@@ -409,18 +407,18 @@ $hostname = gethostbyaddr($ip);
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-floating">
-                                        <select class="form-select postoGrad" id="postoGrad">
+                                        <select class="form-select postoGrad" id="postoGradTRI">
                                             <option value=""></option>
                                         </select>
-                                        <label class="form-label" for="postoGrad">Posto/Grad <span class="text-danger">*</span></label>
+                                        <label class="form-label" for="postoGradTRI">Posto/Grad <span class="text-danger">*</span></label>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-floating">
-                                        <select class="form-select quadroEspec" id="quadroEspec">
+                                        <select class="form-select quadroEspec" id="quadroEspecTRI">
                                             <option value=""></option>
                                         </select>
-                                        <label class="form-label" for="quadroEspec">Quadro/Espec <span class="text-danger">*</span></label>
+                                        <label class="form-label" for="quadroEspecTRI">Quadro/Espec <span class="text-danger">*</span></label>
                                     </div>
                                 </div>
                             </div>
@@ -428,16 +426,16 @@ $hostname = gethostbyaddr($ip);
                             <div class="row mb-3">
                                 <div class="col-md-9">
                                     <div class="form-floating">
-                                        <input class="form-control" id="nomeCompleto" placeholder="Digite seu nome"
+                                        <input class="form-control text-uppercase" id="nomeCompletoTRI" placeholder="Digite seu nome"
                                                type="text">
-                                        <label class="form-label" for="nomeCompleto">Nome Completo <span class="text-danger">*</span></label>
+                                        <label class="form-label" for="nomeCompletoTRI">Nome Completo <span class="text-danger">*</span></label>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-floating">
-                                        <input class="form-control" id="nip" placeholder="NIP"
+                                        <input class="form-control nip" id="nipTRI" placeholder="NIP"
                                                type="text" required>
-                                        <label class="form-label" for="nip">NIP <span class="text-danger">*</span></label>
+                                        <label class="form-label" for="nipTRI">NIP <span class="text-danger">*</span></label>
                                     </div>
                                 </div>
                             </div>
@@ -460,7 +458,7 @@ $hostname = gethostbyaddr($ip);
                 </div>
                 <!-- Botão Gerar TRI -->
                 <div class="mt-3 text-center">
-                    <button class="btn btn-success w-25 mb-3 fw-bold" id="preencherFormTRI" type="button">
+                    <button class="btn btn-success w-25 mb-3 fw-bold" id="gerarTRI" type="button">
                         GERAR TRI
                         <span class="bi bi-file-earmark-arrow-down-fill"></span>
                     </button>
@@ -495,7 +493,7 @@ $hostname = gethostbyaddr($ip);
                 <!-- Formulário -->
                 <div class="col">
                     <div>
-                        <h5 class="text-center my-3">Preencha os dados</h5>
+                        <h5 class="text-center my-3 text-uppercase">Preencha os dados</h5>
                         <form class="formulario">
                             <!-- Oficial/Praça -->
                             <div class="row mb-3 align-items-center justify-content-center">
@@ -517,18 +515,18 @@ $hostname = gethostbyaddr($ip);
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-floating">
-                                        <select class="form-select postoGrad" id="postoGrad" required>
+                                        <select class="form-select postoGrad" id="postoGradTRPVM" required>
                                             <option value=""></option>
                                         </select>
-                                        <label class="form-label" for="postoGrad">Posto/Graduação <span class="text-danger">*</span></label>
+                                        <label class="form-label" for="postoGradTRPVM">Posto/Graduação <span class="text-danger">*</span></label>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-floating">
-                                        <select class="form-select quadroEspec" id="quadroEspec" required>
+                                        <select class="form-select quadroEspec" id="quadroEspecTRPVM" required>
                                             <option value=""></option>
                                         </select>
-                                        <label class="form-label" for="quadroEspec">Quadro/Espec <span class="text-danger">*</span></label>
+                                        <label class="form-label" for="quadroEspecTRPVM">Quadro/Espec <span class="text-danger">*</span></label>
                                     </div>
                                 </div>
                             </div>
@@ -536,16 +534,16 @@ $hostname = gethostbyaddr($ip);
                             <div class="row mb-3">
                                 <div class="col-md-9">
                                     <div class="form-floating">
-                                        <input class="form-control" id="nomeCompleto" placeholder="Digite seu nome"
+                                        <input class="form-control text-uppercase" id="nomeCompletoTRPVM" placeholder="Digite seu nome"
                                                type="text">
-                                        <label class="form-label" for="nomeCompleto">Nome Completo <span class="text-danger">*</span></label>
+                                        <label class="form-label" for="nomeCompletoTRPVM">Nome Completo <span class="text-danger">*</span></label>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-floating">
-                                        <input class="form-control" id="nip" placeholder="NIP"
+                                        <input class="form-control nip" id="nipTRPVM" placeholder="NIP"
                                                type="text" required>
-                                        <label class="form-label" for="nip">NIP <span class="text-danger">*</span></label>
+                                        <label class="form-label" for="nipTRPVM">NIP <span class="text-danger">*</span></label>
                                     </div>
                                 </div>
                             </div>
@@ -568,7 +566,7 @@ $hostname = gethostbyaddr($ip);
                 </div>
                 <!-- Botão Gerar TRPVM -->
                 <div class="mt-3 text-center">
-                    <button class="btn btn-success w-25 mb-3 fw-bold" id="preencherFormTRI" type="button">
+                    <button class="btn btn-success w-25 mb-3 fw-bold" id="gerarTRPVM" type="button">
                         GERAR TRPVM
                         <span class="bi bi-file-earmark-arrow-down-fill"></span>
                     </button>
@@ -578,66 +576,125 @@ $hostname = gethostbyaddr($ip);
     </div>
 </main>
 
-<!-- Modal Seleção de Programas-->
+<!-- Modal Seleção de Programas -->
 <div class="modal fade" id="selecaoProgramasModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
      aria-labelledby="selecaoProgramasLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5 text-uppercase" id="selecaoProgramasLabel">Seleção de programas instalados</h1>
+                <h5 class="modal-title text-uppercase fw-bold" id="selecaoProgramasLabel">
+                    <span class="bi bi-app-indicator pe-1"></span>
+                    Seleção de programas instalados
+                </h5>
                 <button type="button" class="btn-close bg-light btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <p class="text-light">Clique nos programas instalados em seu dispositivo:</p>
+                <div class="text-center">
+                    <button type="button" id="selecionarTodos" class="w-100 mb-2 btn btn-outline-info btn-sm">Selecionar Todos</button>
+                </div>
                 <form id="formProgramas">
                     <div class="row">
                         <div class="col-md-4">
-                            <input type="checkbox" class="btn-check" id="1" autocomplete="off" value="Microsoft Office">
-                            <label class="btn btn-outline-light btn-sm mb-2" for="1">Microsoft Office</label><br>
+                            <input type="checkbox" class="btn-check programa-check" id="1" autocomplete="off" value="Microsoft Office">
+                            <label class="w-100 btn btn-outline-light btn-sm mb-2" for="1">Microsoft Office</label><br>
 
-                            <input type="checkbox" class="btn-check" id="2" autocomplete="off" value="LibreOffice">
-                            <label class="btn btn-outline-light btn-sm mb-2" for="2">LibreOffice</label><br>
+                            <input type="checkbox" class="btn-check programa-check" id="2" autocomplete="off" value="LibreOffice*">
+                            <label class="w-100 btn btn-outline-light btn-sm mb-2" for="2">LibreOffice *</span></label><br>
 
-                            <input type="checkbox" class="btn-check" id="3" autocomplete="off" value="Adobe Reader">
-                            <label class="btn btn-outline-light btn-sm mb-2" for="3">Adobe Reader</label><br>
+                            <input type="checkbox" class="btn-check programa-check" id="3" autocomplete="off" value="Adobe Reader*">
+                            <label class="w-100 btn btn-outline-light btn-sm mb-2" for="3">Adobe Reader *</label><br>
 
-                            <input type="checkbox" class="btn-check" id="4" autocomplete="off" value="7-Zip">
-                            <label class="btn btn-outline-light btn-sm mb-2" for="4">7-Zip</label><br>
+                            <input type="checkbox" class="btn-check programa-check" id="4" autocomplete="off" value="7-Zip*">
+                            <label class="w-100 btn btn-outline-light btn-sm mb-2" for="4">7-Zip *</label><br>
                         </div>
                         <div class="col-md-4">
-                            <input type="checkbox" class="btn-check" id="5" autocomplete="off" value="Eraser">
-                            <label class="btn btn-outline-light btn-sm mb-2" for="5">Eraser</label><br>
+                            <input type="checkbox" class="btn-check programa-check" id="5" autocomplete="off" value="Eraser*">
+                            <label class="w-100 btn btn-outline-light btn-sm mb-2" for="5">Eraser *</label><br>
 
-                            <input type="checkbox" class="btn-check" id="6" autocomplete="off" value="Java JRE">
-                            <label class="btn btn-outline-light btn-sm mb-2" for="6">Java JRE</label><br>
+                            <input type="checkbox" class="btn-check programa-check" id="6" autocomplete="off" value="Java JRE*">
+                            <label class="w-100 btn btn-outline-light btn-sm mb-2" for="6">Java JRE *</label><br>
 
-                            <input type="checkbox" class="btn-check" id="7" autocomplete="off" value="Apache NetBeans">
-                            <label class="btn btn-outline-light btn-sm mb-2" for="7">Apache NetBeans</label><br>
+                            <input type="checkbox" class="btn-check programa-check" id="7" autocomplete="off" value="Apache NetBeans">
+                            <label class="w-100 btn btn-outline-light btn-sm mb-2" for="7">Apache NetBeans</label><br>
 
-                            <input type="checkbox" class="btn-check" id="8" autocomplete="off" value="Kaspersky Antivírus">
-                            <label class="btn btn-outline-light btn-sm mb-2" for="8">Kaspersky Antivírus</label><br>
+                            <input type="checkbox" class="btn-check programa-check" id="8" autocomplete="off" value="Kaspersky Antivírus*">
+                            <label class="w-100 btn btn-outline-light btn-sm mb-2" for="8">Kaspersky Antivírus *</label><br>
                         </div>
                         <div class="col-md-4">
-                            <input type="checkbox" class="btn-check" id="9" autocomplete="off" value="Orion">
-                            <label class="btn btn-outline-light btn-sm mb-2" for="9">Orion</label><br>
+                            <input type="checkbox" class="btn-check programa-check" id="9" autocomplete="off" value="Orion*">
+                            <label class="w-100 btn btn-outline-light btn-sm mb-2" for="9">Orion *</label><br>
 
-                            <input type="checkbox" class="btn-check" id="10" autocomplete="off" value="VMware Workstation">
-                            <label class="btn btn-outline-light btn-sm mb-2" for="10">VMware Workstation</label><br>
+                            <input type="checkbox" class="btn-check programa-check" id="10" autocomplete="off" value="VMware Workstation">
+                            <label class="w-100 btn btn-outline-light btn-sm mb-2" for="10">VMware Workstation</label><br>
 
-                            <input type="checkbox" class="btn-check" id="11" autocomplete="off" value="CorelDRAW">
-                            <label class="btn btn-outline-light btn-sm mb-2" for="11">CorelDRAW</label><br>
+                            <input type="checkbox" class="btn-check programa-check" id="11" autocomplete="off" value="CorelDRAW">
+                            <label class="w-100 btn btn-outline-light btn-sm mb-2" for="11">CorelDRAW</label><br>
 
-                            <input type="checkbox" class="btn-check" id="12" autocomplete="off" value="Adobe Photoshop  ">
-                            <label class="btn btn-outline-light btn-sm mb-2" for="12">Adobe Photoshop</label><br>
+                            <input type="checkbox" class="btn-check programa-check" id="12" autocomplete="off" value="Adobe Photoshop">
+                            <label class="w-100 btn btn-outline-light btn-sm mb-2" for="12">Adobe Photoshop</label><br>
                         </div>
                     </div>
                 </form>
+                <div class="mt-2">
+                    <p class="text-light fst-italic fs-7">
+                        * Programas Homologados pela MB
+                    </p>
+                </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
                 <button type="submit" id="salvarProgramasSelecionados" for="formProgramas" data-bs-dismiss="modal"
-                        class="btn btn-warning btn-sm">
+                        class="btn btn-warning">
                     Salvar seleção
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Aviso Seleção de Programas -->
+<div class="modal fade" id="avisoSelecaoProgramasModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="avisoCamposObrigatoriosLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-warning">
+            <div class="modal-header">
+                <h5 class="modal-title text-uppercase text-dark fw-bold" id="avisoCamposObrigatoriosLabel">
+                    <span class="bi bi-exclamation-triangle-fill pe-1 fs-4">
+                    Atenção
+                </h5>
+                <button type="button" class="btn-close bg-light btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Por favor, selecione pelo menos um programa instalado em seu dispositivo!
+            </div>
+            <div class="modal-footer">
+                <button type="submit" data-bs-dismiss="modal" class="btn btn-light">
+                    Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Aviso Preencher Campos Obrigatórios -->
+<div class="modal fade" id="avisoCamposObrigatoriosModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="avisoCamposObrigatoriosLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-warning">
+            <div class="modal-header">
+                <h5 class="modal-title text-uppercase text-dark fw-bold">
+                    <span class="bi bi-exclamation-triangle-fill pe-1 fs-4">
+                    Atenção
+                </h5>
+                <button type="button" class="btn-close bg-light btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Por favor, preencha todos os campos!
+            </div>
+            <div class="modal-footer">
+                <button type="submit" data-bs-dismiss="modal" class="btn btn-light">
+                    Fechar
                 </button>
             </div>
         </div>
@@ -656,7 +713,6 @@ $hostname = gethostbyaddr($ip);
 </footer>
 
 <!-- jQuery/Bootstrap/jsPDF-->
-<script src="js/jquery-3.7.1.slim.min.js"></script>
 <script src="js/jquery-3.7.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -664,6 +720,9 @@ $hostname = gethostbyaddr($ip);
 <script src="js/jsPDF-AutoTable/jspdf.plugin.autotable.min.js"></script>
 <!-- JS do Sistema -->
 <script src="js/scripts.js"></script>
+<script src="js/gerarTRE.js"></script>
+<script src="js/gerarTRI.js"></script>
+<script src="js/gerarTRPVM.js"></script>
 <script src="js/fontesBase64.js"></script>
 </body>
 

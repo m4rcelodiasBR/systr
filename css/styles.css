@@ -72,7 +72,8 @@ footer {
     width: 100%;
 }
 
-small {
+small,
+.fs-7 {
     font-size: 0.75em;
 }
 
