@@ -165,7 +165,7 @@ function gerarTRE(nomeCompleto, nip, postoGrad, quadroEspec, macAddress, nomeMaq
     const larguraLinha = doc.getTextWidth(linhaAssinatura);
     const posXTextoAssinatura = 190 - larguraLinha / 2;
     doc.text(`${nomeCompleto}`, posXTextoAssinatura, posYAssinatura + lineHeight, { align: 'center' });
-    doc.text(`${postoGrad}-${quadroEspec} ${nip}`, posXTextoAssinatura, posYAssinatura + lineHeight + 5, { align: 'center' });
+    doc.text(`${postoGrad}(${quadroEspec}) ${nip}`, posXTextoAssinatura, posYAssinatura + lineHeight + 5, { align: 'center' });
 
     // Salva o PDF
     doc.save(`TRE ${postoGrad} ${quadroEspec} ${nip} ${nomeCompleto}.pdf`);

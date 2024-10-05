@@ -76,7 +76,7 @@ function gerarTRI(nomeCompleto, postoGrad, quadroEspec, nip) {
     const larguraLinha = doc.getTextWidth(linhaAssinatura);
     const posXTextoAssinatura = 190 - larguraLinha / 2;
     doc.text(`${nomeCompleto}`, posXTextoAssinatura, posYAssinatura + lineHeight, { align: 'center' });
-    doc.text(`${postoGrad}-${quadroEspec} ${nip}`, posXTextoAssinatura, posYAssinatura + lineHeight + 5, { align: 'center' });
+    doc.text(`${postoGrad}(${quadroEspec}) ${nip}`, posXTextoAssinatura, posYAssinatura + lineHeight + 5, { align: 'center' });
 
     // Salva o PDF
     doc.save(`TRPVM ${postoGrad} ${quadroEspec} ${nip} ${nomeCompleto}.pdf`);

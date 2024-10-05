@@ -206,7 +206,7 @@ $hostname = gethostbyaddr($ip);
                                                data-bs-custom-class="custom-tooltip"
                                                data-bs-html="true"
                                                data-bs-placement="bottom"
-                                               data-bs-title="Verifique se a <strong>etiqueta</strong> do seu equipamento é igual a informação deste campo.">
+                                               data-bs-title="Verifique a <strong>etiqueta</strong> do seu equipamento.">
                                         <label class="form-label" for="nomeMaquina">Identificação <span class="text-danger">*</span></label>
                                     </div>
                                 </div>
@@ -254,7 +254,7 @@ $hostname = gethostbyaddr($ip);
                 <!-- Texto Termo -->
                 <div class="col bg-light">
                     <div>
-                        <h5 class="my-3 text-center">Termo de Responsabilidade Individual</h5>
+                        <h5 class="my-3 text-center text-uppercase fw-bold">Termo de Responsabilidade Individual</h5>
                     </div>
                     <div class="text-justify px-2 overflow-auto texto-termo">
                         <p>
@@ -385,7 +385,7 @@ $hostname = gethostbyaddr($ip);
                 <!-- Formulário -->
                 <div class="col">
                     <div>
-                        <h5 class="text-center my-3">Preencha os dados</h5>
+                        <h5 class="text-center my-3 text-uppercase fw-bold">Preencha os dados</h5>
                         <form class="formulario">
                             <!-- Oficial/Praça -->
                             <div class="row mb-3 align-items-center justify-content-center">
@@ -471,7 +471,7 @@ $hostname = gethostbyaddr($ip);
                 <!-- Texto Termo -->
                 <div class="col bg-light">
                     <div>
-                        <h5 class="my-3 text-center">Termo de Responsabilidade Portal MB/Máquina Virtual MB</h5>
+                        <h5 class="my-3 text-center text-uppercase fw-bold">Termo de Responsabilidade Portal MB/Máquina Virtual MB</h5>
                     </div>
                     <div class="text-justify px-2 texto-termo overflow-auto">
                         <p>
@@ -493,7 +493,7 @@ $hostname = gethostbyaddr($ip);
                 <!-- Formulário -->
                 <div class="col">
                     <div>
-                        <h5 class="text-center my-3 text-uppercase">Preencha os dados</h5>
+                        <h5 class="text-center my-3 text-uppercase fw-bold">Preencha os dados</h5>
                         <form class="formulario">
                             <!-- Oficial/Praça -->
                             <div class="row mb-3 align-items-center justify-content-center">
@@ -644,7 +644,7 @@ $hostname = gethostbyaddr($ip);
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
-                <button type="submit" id="salvarProgramasSelecionados" for="formProgramas" data-bs-dismiss="modal"
+                <button type="submit" id="salvarProgramasSelecionados" data-bs-dismiss="modal"
                         class="btn btn-warning">
                     Salvar seleção
                 </button>

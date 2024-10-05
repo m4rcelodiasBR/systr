@@ -10,26 +10,85 @@ $(document).ready(function() {
             // Verificar se Oficial ou Praça está selecionado
             if ($(this).find(".oficialRadio").is(":checked")) {
                 $(this).find("select.postoGrad").html(`
+                <option value="AE">AE</option>
+                <option value="VA">VA</option>
+                <option value="CA">CA</option>
+                <option value="CMG">CMG</option>
+                <option value="CF">CF</option>
+                <option value="CC">CC</option>
+                <option value="CT">CT</option>
                 <option value="1T">1T</option>
                 <option value="2T">2T</option>
-                <option value="CF">CF</option>
-                <option value="CMG">CMG</option>
             `);
                 $(this).find("select.quadroEspec").html(`
                 <option value="CA">CA</option>
-                <option value="T">T</option>
-                <option value="RM2">RM2</option>
+                <option value="T">T</option>]
+                <option value="RM2-T">RM2-T</option>
+                <option value="FN">FN</option>
+                <option value="IM">IM</option>
+                <option value="MD">MD</option>
+                <option value="QC-CA">QC-CA</option>
+                <option value="AA">AA</option>
+                <option value="S">S</option>
+                <option value="RM2-S">RM2-S</option>
+                <option value="AFN">AFN</option>
+                <option value="EN">EN</option>
+                <option value="CN">CN</option>
             `);
             } else if ($(this).find(".pracaRadio").is(":checked")) {
                 $(this).find("select.postoGrad").html(`
                 <option value="SO">SO</option>
                 <option value="1SG">1SG</option>
                 <option value="2SG">2SG</option>
+                <option value="3SG">3SG</option>
+                <option value="CB">CB</option>
+                <option value="MN">MN</option>
+                <option value="SD">SD</option>             
             `);
                 $(this).find("select.quadroEspec").html(`
+                <option value="AD">AD</option>
+                <option value="AH">AH</option>
+                <option value="AM">AM</option>
+                <option value="AR">AR</option>
+                <option value="AT">AT</option>
+                <option value="AV">AV</option>
+                <option value="BA">BA</option>
+                <option value="BD">BD</option>
+                <option value="CA">CA</option>
+                <option value="CI">CI</option>
+                <option value="CL">CL</option>
+                <option value="CN">CN</option>
+                <option value="CO">CO</option>
+                <option value="CP">CP</option>
+                <option value="EG">EG</option>
+                <option value="EL">EL</option>
+                <option value="EF">EF</option>
+                <option value="ET">ET</option>
+                <option value="EP">EP</option>
+                <option value="GC">GC</option>
+                <option value="GR">GR</option>
+                <option value="HD">HD</option>
+                <option value="HN">HN</option>
+                <option value="IF">IF</option>
+                <option value="MA">MA</option>
+                <option value="ME">ME</option>
+                <option value="MI">MI</option>
+                <option value="MO">MO</option>
+                <option value="MR">MR</option>
+                <option value="MU">MU</option>
+                <option value="OS">OS</option>
+                <option value="PA">PA</option>
+                <option value="PC">PC</option>
                 <option value="PD">PD</option>
-                <option value="ES">ES</option>
                 <option value="PL">PL</option>
+                <option value="RM">RM</option>
+                <option value="RB">RB</option>
+                <option value="SQ">SQ</option>
+                <option value="TE">TE</option>
+                <option value="TC">TC</option>
+                <option value="ND">ND</option>
+                <option value="RC">RC</option>
+                <option value="RM2">RM2</option>
             `);
             }
         });
