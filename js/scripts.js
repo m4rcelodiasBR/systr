@@ -87,8 +87,9 @@ $(document).ready(function() {
                 <option value="TE">TE</option>
                 <option value="TC">TC</option>
                 <option value="ND">ND</option>
-                <option value="RC">RC</option>
+                <option value="RM1">RM1</option>
                 <option value="RM2">RM2</option>
+                <option value="RC">RC</option>
             `);
             }
         });

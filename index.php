@@ -467,7 +467,7 @@ $hostname = gethostbyaddr($ip);
                 <!-- Texto Termo -->
                 <div class="col bg-light">
                     <div>
-                        <h5 class="my-3 text-center text-uppercase fw-bold">Termo de Responsabilidade Portal MB/Máquina Virtual MB</h5>
+                        <h5 class="my-3 text-center text-uppercase fw-bold">Termo de Responsabilidade Portal/Máquina Virtual MB</h5>
                     </div>
                     <div class="text-justify px-2 texto-termo overflow-auto">
                         <p>
