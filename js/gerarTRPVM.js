@@ -1,4 +1,4 @@
-function gerarTRI(nomeCompleto, postoGrad, quadroEspec, nip) {
+function gerarTRPVM(nomeCompleto, postoGrad, quadroEspec, nip) {
     // Validar se os campos estão preenchidos
     if (nomeCompleto === "" || postoGrad === "" || quadroEspec === "" || nip === "") {
         $("#avisoCamposObrigatoriosModal").modal('show');

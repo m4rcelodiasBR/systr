@@ -183,6 +183,6 @@ $(document).ready(function() {
         var quadroEspec = $("#quadroEspecTRPVM").val();
         var nip = $("#nipTRPVM").val();
 
-        gerarTRI(nomeCompleto, postoGrad, quadroEspec, nip);
+        gerarTRPVM(nomeCompleto, postoGrad,quadroEspec, nip);
     });
 });
