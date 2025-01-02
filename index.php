@@ -15,26 +15,32 @@ $hostname = gethostbyaddr($ip);
     <link href="bootstrap/icons/bootstrap-icons.min.css" rel="stylesheet">
     <!-- CSS do Sistema -->
     <link href="css/styles.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/Brasao_CPO2.png">
 </head>
 
 <body>
 <header class="w-100">
-    <div class="container">
-        <div class="text-center">
-            <h3 class="py-2 octin-font">Secretaria da Comissão de Promoções de Oficiais</h3>
-        </div>
-    </div>
-    <div class="w-100">
-        <div class=" py-2 text-center text-light titulo-sistema">
-            <h4 class="octin-font">Gerador de Termos de Responsabilidade</h4>
+    <div class="container py-2">
+        <div class="octin-font row py-1">
+            <div class="col-sm-1 py-2">
+                <img src="images/Brasao_CPO2.png" alt="Início" class="logoimg">
+            </div>
+            <div class="col-sm-10 titulos-banner">
+                <div class="name-marinha">Marinha do Brasil</div>
+                <div class="name-site">Secretaria da Comissão de Promoções de Oficiais</div>
+                <div class="name-slogan">"Assessorar o Comandante da Marinha nos diversos processos de seleção de Oficiais."</div>
+            </div>
         </div>
     </div>
 </header>
-
 <main class="container">
-    <div class="text-center my-2 text-decoration-underline">
-        <h5>Escolha o Termo de Responsabilidade</h5>
+    <div class="text-center">
+        <h3 class="octin-font fw-bold text-center titulo-gerador py-2">Gerador de Termo de Responsabilidade</h3>
     </div>
+    <div class="text-center">
+        <p><span class="bi bi-arrow-down-circle-fill"></span> Escolha o Termo, clicando em um dos botões abaixo. <span class="bi bi-arrow-down-circle-fill"></span></p>
+    </div>
+    <hr>
     <!-- Botões para alternar entre os Termos/Formulários -->
     <ul class="nav nav-pills justify-content-center my-3" id="formTabs" role="tablist">
         <li class="nav-item" role="presentation">
@@ -62,7 +68,6 @@ $hostname = gethostbyaddr($ip);
             </button>
         </li>
     </ul>
-    <hr>
     <div class="tab-content">
         <!-- TRE -->
         <div aria-labelledby="tabTermoTRE" class="termo tab-pane fade show active" id="tre-texto" role="tabpanel">
@@ -72,7 +77,7 @@ $hostname = gethostbyaddr($ip);
                     <div>
                         <h5 class="my-3 text-center text-uppercase fw-bold">Termo de Responsabilidade de Estação de Trabalho</h5>
                     </div>
-                    <div class="text-justify px-2 overflow-auto texto-termo">
+                    <div class="text-justify px-2 pb-2 overflow-auto texto-termo">
                         <p>
                             Pelo presente instrumento, eu, <strong>Posto/GRAD ESP XX.XXXX.XX NOME COMPLETO</strong>,
                             perante a Marinha do Brasil,
@@ -81,6 +86,7 @@ $hostname = gethostbyaddr($ip);
                             Instituição, declaro ter recebido desta OM uma estação de trabalho com as seguintes
                             configurações:
                         </p>
+                        <br>
                         <p><strong>I – de identificação:</strong></p>
                         <ul>
                             <li><strong>(a)</strong> endereço IP: <strong>0.0.0.0;</strong></li>
@@ -99,10 +105,12 @@ $hostname = gethostbyaddr($ip);
                             sendo agora de
                             meu conhecimento exclusivo;
                         </p>
+                        <br>
                         <p><strong>IV – de senha de configuração (“setup”):</strong></p>
                         <p>
                             De conhecimento exclusivo do ADMIN e à qual não devo tomar conhecimento.
                         </p>
+                        <br>
                         <p><strong>V – Configurações de hardware:</strong></p>
                         <p>
                             As configurações de hardware posteriormente serão anexadas a este termo e qualquer
@@ -239,7 +247,7 @@ $hostname = gethostbyaddr($ip);
                 </div>
                 <!-- Botão Gerar TRE -->
                 <div class="mt-3 text-center">
-                    <button class="btn btn-success w-25 mb-3 fw-bold" id="gerarTRE" type="submit">
+                    <button class="btn btn-success w-25 my-2 fw-bold" id="gerarTRE" type="submit">
                         GERAR TRE
                         <span class="bi bi-file-earmark-arrow-down-fill"></span>
                     </button>
@@ -254,7 +262,7 @@ $hostname = gethostbyaddr($ip);
                     <div>
                         <h5 class="my-3 text-center text-uppercase fw-bold">Termo de Responsabilidade Individual</h5>
                     </div>
-                    <div class="text-justify px-2 overflow-auto texto-termo">
+                    <div class="text-justify px-2 pb-2 overflow-auto texto-termo">
                         <p>
                             Pelo presente instrumento, eu, <strong>PostoGRAD NOME COMPLETO, NIP XX.XXXX.XX</strong>,
                             perante a Marinha do Brasil, doravante denominada MB, na qualidade de usuário do ambiente
@@ -454,7 +462,7 @@ $hostname = gethostbyaddr($ip);
                 </div>
                 <!-- Botão Gerar TRI -->
                 <div class="mt-3 text-center">
-                    <button class="btn btn-success w-25 mb-3 fw-bold" id="gerarTRI" type="button">
+                    <button class="btn btn-success w-25 my-2 fw-bold" id="gerarTRI" type="button">
                         GERAR TRI
                         <span class="bi bi-file-earmark-arrow-down-fill"></span>
                     </button>
@@ -469,7 +477,7 @@ $hostname = gethostbyaddr($ip);
                     <div>
                         <h5 class="my-3 text-center text-uppercase fw-bold">Termo de Responsabilidade Portal/Máquina Virtual MB</h5>
                     </div>
-                    <div class="text-justify px-2 texto-termo overflow-auto">
+                    <div class="text-justify px-2 pb-2 texto-termo overflow-auto">
                         <p>
                             “O Portal MB, Máquina Virtual MB e as informações por estes sistemas disponibilizadas são de
                             propriedade da Marinha do Brasil. Na qualidade de usuário do ambiente computacional de
@@ -560,7 +568,7 @@ $hostname = gethostbyaddr($ip);
                 </div>
                 <!-- Botão Gerar TRPVM -->
                 <div class="mt-3 text-center">
-                    <button class="btn btn-success w-25 mb-3 fw-bold" id="gerarTRPVM" type="button">
+                    <button class="btn btn-success w-25 my-2 fw-bold" id="gerarTRPVM" type="button">
                         GERAR TRPVM
                         <span class="bi bi-file-earmark-arrow-down-fill"></span>
                     </button>
@@ -569,12 +577,22 @@ $hostname = gethostbyaddr($ip);
         </div>
     </div>
 </main>
+<footer class="text-light py-2">
+    <div class="container">
+        <div>
+            <div class="text-center">
+                <p>&copy; 2025 <span><a href="https://www.cpo.mb">Comissão de Promoções de Oficiais</a></span>. Todos os direitos reservados.</p>
+                <p>SysTR - Desenvolvido por 2ºSG(PD) Marcelo Dias</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <!-- Modal Seleção de Programas -->
 <div class="modal fade" id="selecaoProgramasModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
      aria-labelledby="selecaoProgramasLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content bg-gradient-primary">
             <div class="modal-header">
                 <h5 class="modal-title text-uppercase fw-bold" id="selecaoProgramasLabel">
                     <span class="bi bi-app-indicator pe-1"></span>
@@ -583,7 +601,7 @@ $hostname = gethostbyaddr($ip);
                 <button type="button" class="btn-close bg-light btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p class="text-light">Clique nos programas instalados em seu dispositivo:</p>
+                <p class="text-light pb-1">Clique nos programas instalados em seu dispositivo:</p>
                 <div class="text-center">
                     <button type="button" id="selecionarTodos" class="w-100 mb-2 btn btn-outline-info btn-sm">Selecionar Todos</button>
                 </div>
@@ -631,7 +649,7 @@ $hostname = gethostbyaddr($ip);
                     </div>
                 </form>
                 <div class="mt-2">
-                    <p class="text-light fst-italic fs-7">
+                    <p class="text-warning fst-italic fs-7">
                         * Programas Homologados pela MB
                     </p>
                 </div>
@@ -654,12 +672,12 @@ $hostname = gethostbyaddr($ip);
         <div class="modal-content bg-warning">
             <div class="modal-header">
                 <h5 class="modal-title text-uppercase text-dark fw-bold" id="avisoCamposObrigatoriosLabel">
-                    <span class="bi bi-exclamation-triangle-fill pe-1 fs-4">
+                    <span class="bi bi-exclamation-triangle-fill pe-1">
                     Atenção
                 </h5>
                 <button type="button" class="btn-close bg-light btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body fs-6">
                 Por favor, selecione pelo menos um programa instalado em seu dispositivo!
             </div>
             <div class="modal-footer">
@@ -683,7 +701,7 @@ $hostname = gethostbyaddr($ip);
                 </h5>
                 <button type="button" class="btn-close bg-light btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body fs-6">
                 Por favor, preencha todos os campos!
             </div>
             <div class="modal-footer">
@@ -694,17 +712,6 @@ $hostname = gethostbyaddr($ip);
         </div>
     </div>
 </div>
-
-<footer class="text-light py-2">
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <p class="mb-0">&copy; 2024 Comissão de Promoções de Oficiais. Todos os direitos reservados.</p>
-                <p class="mb-0">SysTR - Desenvolvido por Marcelo Dias</p>
-            </div>
-        </div>
-    </div>
-</footer>
 
 <!-- jQuery/Bootstrap/jsPDF-->
 <script src="js/jquery-3.7.1.min.js"></script>
