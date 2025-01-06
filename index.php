@@ -38,7 +38,7 @@ $hostname = gethostbyaddr($ip);
         <h3 class="octin-font fw-bold text-center titulo-gerador py-2">Gerador de Termo de Responsabilidade</h3>
     </div>
     <div class="text-center">
-        <p><span class="bi bi-arrow-down-circle-fill"></span> Escolha o Termo, clicando em um dos botões abaixo. <span class="bi bi-arrow-down-circle-fill"></span></p>
+        <p>Escolha o Termo desejado clicando em um dos botões abaixo. Preencha os campos e clique em GERAR.</p>
     </div>
     <hr>
     <!-- Botões para alternar entre os Termos/Formulários -->
@@ -479,7 +479,7 @@ $hostname = gethostbyaddr($ip);
                     </div>
                     <div class="text-justify px-2 pb-2 texto-termo overflow-auto">
                         <p>
-                            “O Portal MB, Máquina Virtual MB e as informações por estes sistemas disponibilizadas são de
+                            O Portal MB, Máquina Virtual MB e as informações por estes sistemas disponibilizadas são de
                             propriedade da Marinha do Brasil. Na qualidade de usuário do ambiente computacional de
                             propriedade
                             da MB, declaro estar ciente das normas e procedimentos para a segurança da informação em
@@ -490,7 +490,7 @@ $hostname = gethostbyaddr($ip);
                             proprietária ou
                             possui o direito de uso, como um recurso que deva ter seu sigilo preservado, bem como,
                             utilizá-lo
-                            exclusivamente para o serviço, em consonância com a legislação vigente.”
+                            exclusivamente para o serviço, em consonância com a legislação vigente.
                         </p>
                     </div>
                 </div>
@@ -588,7 +588,6 @@ $hostname = gethostbyaddr($ip);
     </div>
 </footer>
 
-<!-- Modal Seleção de Programas -->
 <div class="modal fade" id="selecaoProgramasModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
      aria-labelledby="selecaoProgramasLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -605,7 +604,7 @@ $hostname = gethostbyaddr($ip);
                 <div class="text-center">
                     <button type="button" id="selecionarTodos" class="w-100 mb-2 btn btn-outline-info btn-sm">Selecionar Todos</button>
                 </div>
-                <form id="formProgramas">
+                <form class="formulario" id="formProgramas">
                     <div class="row">
                         <div class="col-md-4">
                             <input type="checkbox" class="btn-check programa-check" id="1" autocomplete="off" value="Microsoft Office">
@@ -665,7 +664,6 @@ $hostname = gethostbyaddr($ip);
     </div>
 </div>
 
-<!-- Modal Aviso Seleção de Programas -->
 <div class="modal fade" id="avisoSelecaoProgramasModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
      aria-labelledby="avisoCamposObrigatoriosLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -689,7 +687,6 @@ $hostname = gethostbyaddr($ip);
     </div>
 </div>
 
-<!-- Modal Aviso Preencher Campos Obrigatórios -->
 <div class="modal fade" id="avisoCamposObrigatoriosModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
      aria-labelledby="avisoCamposObrigatoriosLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -713,18 +710,34 @@ $hostname = gethostbyaddr($ip);
     </div>
 </div>
 
-<!-- jQuery/Bootstrap/jsPDF-->
+<div class="modal fade" id="modalConfirmacao" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="modalConfirmacaoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" id="modalConfirmacaoContent">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="modalConfirmacaoTitle"></h5>
+                <button type="button" class="btn-close bg-light bt-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body fs-6 text-center" id="modalMensagem"></div>
+            <div class="modal-footer ms-auto me-auto">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="js/jquery-3.7.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="js/jsPDF/jspdf.umd.min.js"></script>
 <script src="js/jsPDF-AutoTable/jspdf.plugin.autotable.min.js"></script>
-<!-- JS do Sistema -->
+
 <script src="js/scripts.js"></script>
 <script src="js/gerarTRE.js"></script>
 <script src="js/gerarTRI.js"></script>
 <script src="js/gerarTRPVM.js"></script>
 <script src="js/fontesBase64.js"></script>
+
 </body>
 
 </html>

@@ -78,6 +78,38 @@ function gerarTRPVM(nomeCompleto, postoGrad, quadroEspec, nip) {
     doc.text(`${nomeCompleto}`, posXTextoAssinatura, posYAssinatura + lineHeight, { align: 'center' });
     doc.text(`${postoGrad}(${quadroEspec}) ${nip}`, posXTextoAssinatura, posYAssinatura + lineHeight + 5, { align: 'center' });
 
-    // Salva o PDF
-    doc.save(`TRPVM ${postoGrad} ${quadroEspec} ${nip} ${nomeCompleto}.pdf`);
+    const nomeArquivo = `TRI ${postoGrad}(${quadroEspec}) ${nip} ${nomeCompleto}.pdf`;
+    const pdfData = doc.output('blob');
+    const formData = new FormData();
+    formData.append('pdf', pdfData, nomeArquivo);
+
+    $.ajax({
+        url: 'php/salvar_trpvm.php',
+        type: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(data) {
+            var response = JSON.parse(data);
+            if (response.status === "success") {
+                $('#modalConfirmacaoTitle').html('<i class="bi bi-check-circle-fill"></i> Sucesso');
+                $('#modalConfirmacao .modal-content').removeClass('bg-danger').addClass('bg-success text-light');
+            } else {
+                $('#modalConfirmacaoTitle').html('<i class="bi bi-x-circle-fill"></i> Erro');
+                $('#modalConfirmacao .modal-content').removeClass('bg-success').addClass('bg-danger text-light');
+            }
+
+            $('#modalMensagem').text(response.message);
+
+            $('#modalConfirmacao').modal('show');
+        },
+        error: function(error) {
+            console.error('Erro ao enviar o TRPVM para o servidor. Contate o Administrador da Rede Local:', error);
+        }
+    });
+
+    doc.save(nomeArquivo);
+
+    $('.formulario')[0].reset();
+    $('.formulario input[type="checkbox"]').prop('checked', false);
 }
