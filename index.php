@@ -10,10 +10,8 @@ $hostname = gethostbyaddr($ip);
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>CPO | Gerador de Termo de Responsabilidade</title>
-    <!-- Bootstrap CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="bootstrap/icons/bootstrap-icons.min.css" rel="stylesheet">
-    <!-- CSS do Sistema -->
     <link href="css/styles.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/Brasao_CPO2.png">
 </head>
@@ -33,12 +31,12 @@ $hostname = gethostbyaddr($ip);
         </div>
     </div>
 </header>
+<div class="w-100 py-1 titulo-gerador">
+    <h3 class="octin-font fw-bold text-center">Gerador de Termo de Responsabilidade</h3>
+</div>
 <main class="container">
-    <div class="text-center">
-        <h3 class="octin-font fw-bold text-center titulo-gerador py-2">Gerador de Termo de Responsabilidade</h3>
-    </div>
-    <div class="text-center">
-        <p>Escolha o Termo desejado clicando em um dos botões abaixo. Preencha os campos e clique em GERAR.</p>
+    <div class="text-center pt-2">
+        <p>Escolha o Termo de Responsabilidade desejado clicando em um dos botões abaixo. Preencha os campos e clique em GERAR.</p>
     </div>
     <hr>
     <!-- Botões para alternar entre os Termos/Formulários -->
@@ -247,7 +245,7 @@ $hostname = gethostbyaddr($ip);
                 </div>
                 <!-- Botão Gerar TRE -->
                 <div class="mt-3 text-center">
-                    <button class="btn btn-success w-25 my-2 fw-bold" id="gerarTRE" type="submit">
+                    <button class="btn btn-success w-25 my-2 fw-bold py-2" id="gerarTRE" type="submit">
                         GERAR TRE
                         <span class="bi bi-file-earmark-arrow-down-fill"></span>
                     </button>
@@ -462,7 +460,7 @@ $hostname = gethostbyaddr($ip);
                 </div>
                 <!-- Botão Gerar TRI -->
                 <div class="mt-3 text-center">
-                    <button class="btn btn-success w-25 my-2 fw-bold" id="gerarTRI" type="button">
+                    <button class="btn btn-success w-25 my-2 fw-bold py-2" id="gerarTRI" type="button">
                         GERAR TRI
                         <span class="bi bi-file-earmark-arrow-down-fill"></span>
                     </button>
@@ -568,7 +566,7 @@ $hostname = gethostbyaddr($ip);
                 </div>
                 <!-- Botão Gerar TRPVM -->
                 <div class="mt-3 text-center">
-                    <button class="btn btn-success w-25 my-2 fw-bold" id="gerarTRPVM" type="button">
+                    <button class="btn btn-success w-25 my-2 fw-bold py-2" id="gerarTRPVM" type="button">
                         GERAR TRPVM
                         <span class="bi bi-file-earmark-arrow-down-fill"></span>
                     </button>
