@@ -136,11 +136,11 @@ $(document).ready(function() {
         if (!selecionarTodosProgramas) {
             $(".programa-check").prop("checked", true);
             $(this).text('Limpar Seleção');
-            $(this).removeClass('btn-outline-info').addClass('btn-info');
+            $(this).removeClass('btn-outline-warning').addClass('btn-warning');
         } else {
             $(".programa-check").prop('checked', false);
             $(this).text('Selecionar Todos');
-            $(this).removeClass('btn-info').addClass('btn-outline-info');
+            $(this).removeClass('btn-warning').addClass('btn-outline-warning');
         }
         selecionarTodosProgramas = !selecionarTodosProgramas;
     });

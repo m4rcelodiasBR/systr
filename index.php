@@ -24,15 +24,15 @@ $hostname = gethostbyaddr($ip);
                 <img src="images/Brasao_CPO2.png" alt="Início" class="logoimg">
             </div>
             <div class="col-sm-10 titulos-banner">
-                <div class="name-marinha">Marinha do Brasil</div>
-                <div class="name-site">Secretaria da Comissão de Promoções de Oficiais</div>
+                <p class="name-marinha">Marinha do Brasil</p>
+                <h1 class="name-site">Secretaria da Comissão de Promoções de Oficiais</h1>
                 <div class="name-slogan">"Assessorar o Comandante da Marinha nos diversos processos de seleção de Oficiais."</div>
             </div>
         </div>
     </div>
 </header>
 <div class="w-100 py-1 titulo-gerador">
-    <h3 class="octin-font fw-bold text-center">Gerador de Termo de Responsabilidade</h3>
+    <h3 class="octin-font fw-bold text-center">Gerador de Termo de Responsabilidade - Versão Beta</h3>
 </div>
 <main class="container">
     <div class="text-center pt-2">
@@ -267,119 +267,144 @@ $hostname = gethostbyaddr($ip);
                             computacional de propriedade daquela Instituição, declaro estar ciente das normas de
                             segurança das informações digitais da OM, segundo as quais devo:
                         </p>
+                        <br>
                         <p>
                             <strong>a)</strong> tratar a informação digital como patrimônio da MB e como um recurso que
                             deva ter seu sigilo preservado, em consonância com a legislação vigente;
                         </p>
+                        <br>
                         <p>
                             <strong>b)</strong> utilizar as informações disponíveis e os sistemas e produtos
                             computacionais, dos quais a MB é proprietária ou possui o direito de uso, exclusivamente
                             para o interesse do serviço;
                         </p>
+                        <br>
                         <p>
                             <strong>c)</strong> preservar o conteúdo das informações sigilosas a que tiver acesso, sem
                             divulgá-las para pessoas não autorizadas;
                         </p>
+                        <br>
                         <p>
                             <strong>d)</strong> não tentar obter acesso a informação cujo grau de sigilo não seja
                             compatível com a minha Credencial de Segurança (CREDSEG) ou que eu não tenha autorização ou
                             necessidade de conhecer;
                         </p>
+                        <br>
                         <p>
                             <strong>e)</strong> não compartilhar o uso de senha com outros usuários;
                         </p>
+                        <br>
                         <p>
                             <strong>f)</strong> não me fazer passar por outro usuário usando a sua identificação de
                             acesso e senha;
                         </p>
+                        <br>
                         <p>
                             <strong>g)</strong> não alterar o endereço de rede ou qualquer outro dado de identificação
                             do microcomputador de meu uso;
                         </p>
+                        <br>
                         <p>
                             <strong>h)</strong> instalar e utilizar em meu microcomputador somente programas homologados
                             para uso na MB e que esta possua as respectivas licenças de uso ou, no caso de programas de
                             domínio público, mediante autorização formal do Oficial de Segurança da Informação e
                             Comunicações (OSIC) da OM;
                         </p>
+                        <br>
                         <p>
                             <strong>i)</strong> no caso de exoneração, demissão, licenciamento, término de prestação de
                             serviço ou qualquer tipo de afastamento, preservar o conteúdo das informações e documentos
                             sigilosos a que tive acesso e não divulgá-los para pessoas não autorizadas;
                         </p>
+                        <br>
                         <p>
                             <strong>j)</strong> guardar segredo das minhas autenticações de acesso (senhas) utilizadas
                             no ambiente computacional da OM, não cedendo, não transferindo, não divulgando e não
                             permitindo o seu conhecimento por terceiros;
                         </p>
+                        <br>
                         <p>
                             <strong>k)</strong> não utilizar senha com sequência fácil ou óbvia de caracteres que
                             facilite a sua descoberta e não escrever a senha em lugares visíveis ou de fácil acesso;
                         </p>
+                        <br>
                         <p>
                             <strong>l)</strong> utilizar, ao me afastar momentaneamente da minha estação de trabalho,
                             descanso de tela (“screen saver”) protegido por senha, a fim de evitar que alguém possa ver
                             as informações que estejam disponíveis na tela do computador;
                         </p>
+                        <br>
                         <p>
                             <strong>m)</strong> ao me ausentar do local de trabalho, momentaneamente ou ao término de
                             minhas atividades diárias, certificar-me de que a sessão aberta no ambiente computacional
                             com minha identificação foi fechada e as informações que exigem sigilo foram adequadamente
                             salvaguardadas;
                         </p>
+                        <br>
                         <p>
                             <strong>n)</strong> seguir as orientações da área de informática da OM relativas à
                             instalação, à manutenção e ao uso adequado dos equipamentos, dos sistemas e dos programas do
                             ambiente computacional;
                         </p>
+                        <br>
                         <p>
                             <strong>o)</strong> comunicar imediatamente ao meu superior hierárquico e ao Oficial de
                             Segurança da Informação e Comunicações (OSIC) da OM a ocorrência de qualquer evento que
                             implique ameaça ou impedimento de cumprir os procedimentos de segurança estabelecidos;
                         </p>
+                        <br>
                         <p>
                             <strong>p)</strong> responder, perante a MB, às auditorias e ao Oficial de Segurança da
                             Informação e Comunicações (OSIC) da OM, por acessos, tentativas de acessos ou uso indevido
                             da informação digital realizados com a minha identificação ou autenticação;
                         </p>
+                        <br>
                         <p>
                             <strong>q)</strong> não praticar quaisquer atos que possam afetar o sigilo ou a integridade
                             da informação;
                         </p>
+                        <br>
                         <p>
                             <strong>r)</strong> estar ciente de que toda informação digital armazenada e processada no
                             ambiente computacional da OM pode ser auditada, como no caso de páginas informativas
                             (“sites”) visitadas por mim;
                         </p>
+                        <br>
                         <p>
                             <strong>s)</strong> não transmitir, copiar ou reter arquivos contendo textos, fotos, filmes
                             ou quaisquer outros registros que contrariem a moral, os bons costumes e a legislação
                             vigente;
                         </p>
+                        <br>
                         <p>
                             <strong>t)</strong> não transferir qualquer tipo de arquivo que pertença à MB para outro
                             local, seja por meio magnético ou não, exceto no interesse do serviço e mediante autorização
                             da autoridade competente;
                         </p>
+                        <br>
                         <p>
                             <strong>u)</strong> estar ciente de que o processamento, o trâmite e o armazenamento de
                             arquivos que não sejam de interesse do serviço são expressamente proibidos no ambiente
                             computacional da OM;
                         </p>
+                        <br>
                         <p>
                             <strong>v)</strong> estar ciente de que a MB poderá auditar os arquivos em trâmite ou
                             armazenados nos equipamentos do ambiente computacional da OM sob meu uso ou
                             responsabilidade;
                         </p>
+                        <br>
                         <p>
                             <strong>w)</strong> estar ciente de que o correio eletrônico é de uso exclusivo para o
                             interesse do serviço e qualquer correspondência eletrônica originada ou retransmitida no
                             ambiente computacional da OM deve obedecer a este preceito; e
                         </p>
+                        <br>
                         <p>
                             <strong>x)</strong> estar ciente de que a MB poderá auditar as correspondências eletrônicas
                             originadas ou retransmitidas por mim no ambiente computacional da OM.
                         </p>
+                        <br>
                         <p>
                             Desta forma, estou ciente da minha responsabilidade pelas consequências decorrentes da não
                             observância do acima exposto e da legislação vigente.
@@ -579,8 +604,8 @@ $hostname = gethostbyaddr($ip);
     <div class="container">
         <div>
             <div class="text-center">
-                <p>&copy; 2025 <span><a href="https://www.cpo.mb">Comissão de Promoções de Oficiais</a></span>. Todos os direitos reservados.</p>
-                <p>SysTR - Desenvolvido por 2ºSG(PD) Marcelo Dias</p>
+                <p>&copy; 2025 <span><a href="http://www.cpo.mb">Comissão de Promoções de Oficiais</a></span>. Todos os direitos reservados.</p>
+                <p>SysTR Versão Beta - Desenvolvido por 2ºSG(PD) Marcelo Dias</p>
             </div>
         </div>
     </div>
@@ -600,7 +625,7 @@ $hostname = gethostbyaddr($ip);
             <div class="modal-body">
                 <p class="text-light pb-1">Clique nos programas instalados em seu dispositivo:</p>
                 <div class="text-center">
-                    <button type="button" id="selecionarTodos" class="w-100 mb-2 btn btn-outline-info btn-sm">Selecionar Todos</button>
+                    <button type="button" id="selecionarTodos" class="w-100 mb-2 btn btn-outline-warning btn-sm">Selecionar Todos</button>
                 </div>
                 <form class="formulario" id="formProgramas">
                     <div class="row">
